@@ -1,1 +1,1 @@
-print('Protonen: ' + str(10 ** 68))
+print('Protonen: ' + str(10 ** 86))
