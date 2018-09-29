@@ -1,7 +1,7 @@
 # invoeren in centen
 x = float(input('aantal eurocent : ') )
 
-#berekening
+# berekening (kon ook met r)
 d_100 = x // 100
 r_100 = x % 100
 d_50 = r_100 // 50
