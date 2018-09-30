@@ -1,21 +1,20 @@
 # invoeren in centen
-x = float(input('aantal eurocent : ') )
+x = int(input('aantal eurocent : ') )
 
 # berekening (kon ook met r)
-d_100 = x // 100
-r_100 = x % 100
-d_50 = r_100 // 50
-r_50 = r_100 % 50
-d_20 = r_50 // 20
-r_20 = r_50 % 20
-d_10 = r_20 // 10
-r_10 = r_20 % 10
-d_5 = r_10 // 5
-r_5 = r_10 % 5
-d_2 = r_5 // 2
-r_2 = r_5 % 2
-d_1 = r_2 // 1
+aantal_muntjes = x // 100
+r = x % 100
+aantal_muntjes += (r // 50)
+r %= 50
+aantal_muntjes += r // 20
+r = r % 20
+aantal_muntjes += r // 10
+r = r % 10
+aantal_muntjes += r // 5
+r = r % 5
+aantal_muntjes += r // 2
+r = r % 2
+aantal_muntjes += r
 
 #aantal muntstukken berekenen
-aantal_muntstukken = int(d_100 + d_50 + d_20 + d_10 + d_5 + d_2 + d_1)
-print(str(int(x)), 'cent kan je omwisselen in ' + str(aantal_muntstukken), 'muntstukken')
+print(str(x), 'cent kan je omwisselen in ' + str(aantal_muntjes) + ' muntstukken')
