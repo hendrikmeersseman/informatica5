@@ -2,7 +2,7 @@ q1 = 2.0 * (10** -6)
 q2 = 1.0 * (10** -6)
 k0 = 8.99 * (10 ** 9)
 
-#invoer
+# invoer
 r = float(input('geef afstand(in cm): '))
 
 #bewerking
