@@ -15,6 +15,5 @@ elif (licht < 0.01 and temp > 5000) or (licht < 0.0001 and temp > 3000):
     uit = 'witte dwergen'
 else:
     uit = 'hoofdreeks'
-
 #uitvoer
 print(uit)
