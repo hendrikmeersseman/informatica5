@@ -10,7 +10,7 @@ pv = min((vv * dv) / 40, 1)
 #berekening auto's
 pa = min((va * da) / 40, 1)
 
-#berekening indicatoren
+# berekening indicatoren
 minp = min(pv, pa)
 maxp = max(pv, pa)
 verschp = abs(pv - pa)
