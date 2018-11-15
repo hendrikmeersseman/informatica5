@@ -1,5 +1,6 @@
 #invoer
 aantal_getallen = int(input('geef aantal getallen: '))
+
 maxi = float(input('getal: '))
 g = maxi
 for i in range(aantal_getallen - 1):

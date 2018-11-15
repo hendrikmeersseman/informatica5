@@ -1,5 +1,6 @@
 #invoer
 woord = input('geef woord: ')
+
 omgekeerd_woord = ''
 
 #berekening
