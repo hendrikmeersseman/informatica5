@@ -1,7 +1,12 @@
 getal = int(input('Welk getal wilt u onderzoeken? '))
 n = 2
 i = 1
-while n < getal:
+b = 1
+if getal % 2 == 0:
+    mes = '{} is geen priemgetal'.format(getal)
+    b = 0
+    i = 0
+while b and n < getal:
     if (getal % n)  == 0:
         mes = '{} is geen priemgetal'.format(getal)
         i = 0
