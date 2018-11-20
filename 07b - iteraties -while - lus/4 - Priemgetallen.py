@@ -1,4 +1,4 @@
-getal = int(input('Welk getal wilt u onderzoeken? '))
+getal = int(input('Van welk getal wilt u weten of het een priemgetal is? '))
 n = 2
 i = 1
 b = 1
