@@ -3,17 +3,18 @@ seed(1)
 teraden = randint(1,100)
 geraden = randint(1,100)
 if geraden < teraden:
-    lg, gg = geraden, 100
+    lg, gg = geraden + 1, 100
 else:
-    lg, gg = 1, geraden
-aantal = 0
+    lg, gg = 1, geraden - 1
+aantal = 1
 print(teraden, geraden)
+print(lg, gg)
 while teraden != geraden:
     geraden = randint(lg, gg)
     if geraden < teraden:
-        lg = geraden
+        lg = geraden + 1
     else:
-        gg = geraden
+        gg = geraden - 1
     geraden = randint(lg, gg)
     print(geraden)
     print(lg,gg)
