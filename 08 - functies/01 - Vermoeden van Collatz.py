@@ -10,4 +10,8 @@ def collatz(n):
     while n != 1:
         n = volgend_collatz_getal(n)
         aantal += 1
+        print(n)
     return aantal
+getal = int(input('geef getal: '))
+a = collatz(getal)
+print(a)
