@@ -30,7 +30,22 @@ def versleutel(zin, plaatsen):
             nieuwezin += letter
     return nieuwezin
 
-zin = str(input('Welke zin wilt u encrypteren? '))
+def omkeren(zin):
+    omgekeerd_woord = ''
+    for letter in zin:
+        omgekeerd_woord = letter + omgekeerd_woord
+    return omgekeerd_woord
+
+zin = str(input("""Welke zin wilt u encrypteren? """))
 nummer = int(input('Geef geheime versleuteling:'))
-mes = versleutel(zin, nummer)
+omk = str(input('wilt u de zin ook omkeren? (ja / nee)'))
+if omk == 'ja':
+    omk = 1
+else:
+    omk = 0
+
+mes = (versleutel(zin, nummer))
+if omk:
+    mes = omkeren(mes)
+
 print(mes)
