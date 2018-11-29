@@ -12,5 +12,7 @@ def oplopende_cijfers(g1, g2, g3, g4):
     return tuple(uitv)
 
 def op_af_getallen(getal):
-    str
+    getal2 = sorted(getal, reverse= true)
+    return getal,getal2
+
 print(oplopende_cijfers(input()))
