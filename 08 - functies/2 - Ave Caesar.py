@@ -7,6 +7,7 @@ def is_letter(letter):
     return uitv
 
 def roteer_letter(letter, plaatsen):
+    #hoeft niet uitgesplitst te worden
     plaatsen %= 26
     if is_letter(letter):
         nummer = ord(letter)
