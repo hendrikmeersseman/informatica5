@@ -19,7 +19,7 @@ def sorteer(tekst):
 def is_alfabetisch(tekst):
     nieuw = sorteer(tekst)
     if tekst in nieuw:
-        uitv = True
+        return True
     else:
-        uitv = False
-    return uitv
+        return False
+
