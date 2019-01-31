@@ -4,9 +4,9 @@ from math import sqrt
 
 deler = 2
 
-while getal % deler != 0 and getal != 1 and deler < sqrt(getal):
+while getal % deler != 0 and getal != 1 and deler <= sqrt(getal):
     deler += 1
-if deler == getal:
+if deler == int(sqrt(getal)):
     mes = 'priemgetal'
 else:
     mes = 'geen priemgetal'
