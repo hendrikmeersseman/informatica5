@@ -7,4 +7,5 @@ def doe_maar_gewoon(woord):
             nieuw_woord += woord[i]
     nieuw_woord += woord[-1]
     return  nieuw_woord
+
 print(doe_maar_gewoon('stresSsymptOom'))
