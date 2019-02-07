@@ -14,9 +14,5 @@ def geldige_zetten(zetten):
 
 
 
-
-
-
-
 print(geldige_zetten(('f8', 'XZJM', 'Pa3', 'Pf3')))
 print(geldige_zetten(('Ta1', 'e5', 'h8', 'f7', 'Db7', 'Lg3')))

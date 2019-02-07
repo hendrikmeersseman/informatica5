@@ -4,8 +4,9 @@ nieuw = ''
 kolommen = len(rooster) // rijen
 
 for i in range(len(rooster)):
-    if rooster[i - kolommen] ==
-
+    pass
+    if rooster[i - kolommen] == 1:
+        pass
 
 print('\n')
 print(len(rooster))
