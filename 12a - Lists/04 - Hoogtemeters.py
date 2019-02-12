@@ -13,6 +13,8 @@ def dalen_en_stijgen(lijst):
         else:
             stijgend += getal
     return abs(dalend), stijgend
+
+
 def Bereken(lijst):
     lijst = hoogtemeters(lijst)
     return dalen_en_stijgen(lijst)
