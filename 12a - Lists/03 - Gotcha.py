@@ -15,6 +15,11 @@ def ik_ben_vermoord(namen, persoon):
     moordenaar = namen[namen.index(persoon) - 1]
 
     return ik_heb_gemoord(namen, moordenaar)
+
+
+
+
+
 print(ik_heb_gemoord(['jan', 'piet', 'joris', 'korneel'],'joris'))
 
 print(ik_heb_gemoord(['jan'],'jan'))
