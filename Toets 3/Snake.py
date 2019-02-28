@@ -13,9 +13,11 @@ def beweeg(invoer, richting):
 def teruggekeerd(bewegingen):
     bewegingen.sort()
     return (bewegingen[0] == '^' and bewegingen[1] == 'v') or (bewegingen[0] == '<' and bewegingen[1] == '>')
+    # beter return richting == ['<', '>'] or richting == ['^', 'v']
 
 def laatste_levende_positie(lijst):
     nieuw, index = beweeg((0, 0), lijst[0]), 1
+    #beter while ..... teruggekeerd([lijst[index - 1], lijst[index])
     while index < len(lijst) and not teruggekeerd(lijst[(index - 1):index + 1]):
         nieuw = beweeg(nieuw, lijst[index])
         index += 1
