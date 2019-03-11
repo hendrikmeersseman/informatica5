@@ -14,8 +14,20 @@ def woord_frequentie(zinnen):
 def woorden_per_frequentie(zinnen):
     lijst, uitv = woord_frequentie(zinnen), {}
     for element in lijst:
-        if lijst
+        if lijst[element] in uitv:
+            uitv[lijst[element]].append(element)
+        else:
+            uitv[lijst[element]] = [element]
+    return uitv
+
+def meest_gebruikte_woorden(zinnen):
+    verzameling = woorden_per_frequentie(zinnen)
+    return verzameling[max(verzameling)]
+
+##########################################################################################"""
 print('ik ben blij'.split())
 print(woord_frequentie('Dit is een zin. En nog een zin. En een laatste zin.'))
+print(woorden_per_frequentie('Dit is een zin. En nog een zin. En een laatste zin.'))
+print(meest_gebruikte_woorden('Dit is een zin. En nog een zin. En een laatste zin.'))
 
 
