@@ -8,7 +8,6 @@ def verwijder_newline(lijn):
             uitv.append(element)
     return uitv
 
-
 def lees_bestand(file):
     with open(file) as bestand:
         bestand = bestand.readlines()
@@ -18,3 +17,17 @@ def lees_bestand(file):
             lijn = verwijder_newline(lijn)
             nieuw.append(lijn)
         return nieuw
+
+def selecteer_kolom(rij, bestand):
+    file = lees_bestand(bestand)
+    index = file[0].index(rij)
+    file.pop(0)
+    uitv = []
+    for element in file:
+        uitv.append(float(element[index]))
+    return uitv
+
+def hoogste_koers(lijst):
+    return max(lijst)
+
+print(hoogste_koers(selecteer_kolom('High', 'Apple.txt')))
