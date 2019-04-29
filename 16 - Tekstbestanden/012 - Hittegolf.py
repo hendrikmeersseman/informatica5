@@ -5,7 +5,6 @@ def lijsten_nr_lijst(lijst):
             uitv.append(int(b))
     return uitv
 
-
 def bepaal_hittegolven(bestand):
     nieuw = []
     with open(bestand) as file:
@@ -13,7 +12,6 @@ def bepaal_hittegolven(bestand):
 
     for lijn in lijst:
         nieuw.append(lijn[:-1].split())
-
     temp = lijsten_nr_lijst(nieuw)
     data, aantal_25_plus, aantal_30_plus, aantal = [], 0, 0, 0
     for i in range(len(temp)):
@@ -28,12 +26,9 @@ def bepaal_hittegolven(bestand):
                 begin = (i - aantal_25_plus) + 1
                 data.append((begin, i))
                 aantal += 1
+            # periode op nul zetten
             aantal_30_plus, aantal_25_plus = 0, 0
-
     if aantal_30_plus >= 5 and aantal_30_plus >= 3:
         data.append((i + 1 - aantal_25_plus, i))
 
     return aantal, data
-
-inv = str(input('Geef lijst met temperaturen: '))
-print(bepaal_hittegolven(inv))

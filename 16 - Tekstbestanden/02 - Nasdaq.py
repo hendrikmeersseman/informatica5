@@ -1,25 +1,20 @@
 def verwijder_newline(lijn):
     uitv = []
     for element in lijn:
-        if '\n' in element:
-            element = element[:-1]
-            uitv.append(element)
-        else:
-            uitv.append(element)
+        element = element.replace(',', '').replace('\n', '')
+        uitv.append(element)
     return uitv
 
-def lees_bestand(file):
+def lees_aandeel(file):
     with open(file) as bestand:
-        bestand = bestand.readlines()
-        nieuw = []
+        bestand, nieuw = bestand.readlines(), []
         for i in bestand:
-            lijn = i.split(';')
-            lijn = verwijder_newline(lijn)
+            lijn = verwijder_newline(i.split(';'))
             nieuw.append(lijn)
-        return nieuw
+    return nieuw
 
 def selecteer_kolom(rij, bestand):
-    file = lees_bestand(bestand)
+    file = lees_aandeel(bestand)
     index = file[0].index(rij)
     file.pop(0)
     uitv = []
@@ -29,5 +24,3 @@ def selecteer_kolom(rij, bestand):
 
 def hoogste_koers(lijst):
     return max(lijst)
-
-print(hoogste_koers(selecteer_kolom('High', 'Apple.txt')))
