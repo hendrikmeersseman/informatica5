@@ -1,9 +1,7 @@
 def behoort_tot_taal(tekst, taal):
     lijst = set(tekst)
     lijst.discard(' ')
-    if lijst == set():
-        return False
-    return lijst.issubset(taal)
+    return lijst.issubset(taal) and lijst != set()
 
 def is_onleesbaar(tekst, taal):
     lijst = set(tekst)
