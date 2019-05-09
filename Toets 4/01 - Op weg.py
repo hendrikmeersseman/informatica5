@@ -26,7 +26,7 @@ def bestaat_route(steden, kaart):
 
 
 
-
+###################################################################################################################################
 kaart = {'Brugge': {'Gent', 'Antwerpen'}, 'Kortrijk': {'Gent'}, 'Gent': {'Antwerpen', 'Kortrijk', 'Brugge'}, 'Antwerpen': {'Gent', 'Brussel', 'Brugge'}, 'Brussel': {'Hasselt', 'Antwerpen'}, 'Hasselt': {'Brussel'}}
 
 print(bestaat_weg('Brussel', 'Hasselt', kaart))
