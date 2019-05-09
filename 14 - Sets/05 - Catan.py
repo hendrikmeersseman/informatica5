@@ -22,6 +22,10 @@ def wisselen(ruilmarkt, gewenst, verzameld):
 
     verzameld.append(gewenst)
     return verzameld
+
+
+
+
 ruilmarkt = {'goud': {'wol', 'steen', 'erts'}, 'wol': {'hout', 'steen', 'erts'}, 'erts': {'hout', 'steen'}, 'steen': {'hout', 'graan'}}
 
 
