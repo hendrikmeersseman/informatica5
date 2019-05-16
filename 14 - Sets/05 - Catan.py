@@ -16,7 +16,7 @@ def bereken_ruilmiddelen(ruilmarkt, gewenst):
 
 def wisselen(ruilmarkt, gewenst, verzameld):
     if not wisselen_mogelijk(ruilmarkt, gewenst, verzameld):
-         return verzameld
+        return verzameld
     for element in ruilmarkt[gewenst]:
         verzameld.remove(element)
 
