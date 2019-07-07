@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 
 
 def genereer_rij(aantal):
-    rij = []
+    rij_1 = []
     for i in range(aantal):
-        rij.append(randint(0, aantal))
-    return rij
+        rij_1.append(randint(0, aantal))
+    return rij_1
 
 
 def insertion_sort(a):
@@ -20,21 +20,49 @@ def insertion_sort(a):
         a[i + 1] = key
     return a
 
-i, n, t = 10, [], []
+i, n, t_insertion, t_python, t_bubble = 10, [], [], [], []
 
-while i < 10000:
-    rij = genereer_rij(i)
+
+def bubbel_sort(rij):
+    for i in range(0, len(rij) - 1):
+        for j in range(len(rij) - 1, i, -1):
+            if rij[j] < rij[j - 1]:
+                rij[j], rij[j - 1] = rij[j - 1], rij[j]
+    return rij
+
+
+
+while i < 2000:
+    rij_1 = genereer_rij(i)
+    rij_2 = rij_1.copy()
+    rij_3 = rij_1.copy()
+    # insertion sort testen
     start = time()
-    rij = insertion_sort(rij)
+    rij = insertion_sort(rij_1)
     stop = time()
+    t_insertion.append(stop - start)
+
+    # Sorteerfunctie van python testen
+    start = time()
+    rij_2.sort()
+    stop = time()
+    t_python.append(stop - start)
+
+    # bubble sort testen
+    start = time()
+    bubbel_sort(rij_3)
+    stop = time()
+    t_bubble.append(stop - start)
 
     n.append(i)
-    t.append(stop - start)
+    i += 50
 
-    i *= 2
-
-plt.plot(n, t, '-ro')
+plt.plot(n, t_insertion)
+plt.plot(n, t_python)
+plt.plot(n, t_bubble)
 plt.xlabel('N')
 plt.ylabel('T')
 plt.title('insertion sort')
+plt.gca().legend(('insertion sort', 'python sort', 'bubble sort'))
+plt.gcf().canvas.set_window_title('Hendrik Meersseman')
 plt.show()
