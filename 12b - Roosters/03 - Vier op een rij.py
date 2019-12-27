@@ -7,8 +7,7 @@ def printbaar_rek(rek):
 
 def speel(kleur, kollom, rek):
     rek.reverse()
-    stop = 0
-    rij = 0
+    stop, rij = 0, 0
     while not stop and rij < len(rek):
         if rek[rij][kollom] != 'O':
             stop = 1
@@ -17,6 +16,7 @@ def speel(kleur, kollom, rek):
     rek[rij - 1][kollom] = kleur
     rek.reverse()
     return rek
+
 
 
 print(printbaar_rek([['R', 'O', 'O', 'O', 'O'], ['O', 'O', 'O', 'O', 'O'], ['O', 'O', 'O', 'O', 'O'], ['O', 'O', 'O', 'O', 'O']]))
