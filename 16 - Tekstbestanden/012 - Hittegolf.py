@@ -32,3 +32,5 @@ def bepaal_hittegolven(bestand):
         data.append((i + 1 - aantal_25_plus, i))
 
     return aantal, data
+
+print(bepaal_hittegolven("temperaturen.txt"))

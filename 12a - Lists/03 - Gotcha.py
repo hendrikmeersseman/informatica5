@@ -13,7 +13,6 @@ def ik_heb_gemoord(namen, persoon):
 
 def ik_ben_vermoord(namen, persoon):
     moordenaar = namen[namen.index(persoon) - 1]
-
     return ik_heb_gemoord(namen, moordenaar)
 
 

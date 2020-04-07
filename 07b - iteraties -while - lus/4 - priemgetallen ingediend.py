@@ -1,6 +1,7 @@
 getal = int(input('Welk getal wilt u onderzoeken? '))
 n = 2
 i = 1
+from math import sqrt
 while n < getal:
     if (getal % n) == 0:
         mes = '{} is geen priemgetal'.format(getal)

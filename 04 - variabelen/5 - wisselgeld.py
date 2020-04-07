@@ -16,5 +16,8 @@ aantal_muntjes += r // 2
 r %= 2
 aantal_muntjes += r
 
+
 #aantal muntstukken berekenen
 print(str(x), 'cent kan je omwisselen in ' + str(aantal_muntjes) + ' muntstukken')
+mystring = "hello"
+print("String: %s" % mystring)

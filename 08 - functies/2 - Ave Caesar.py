@@ -32,10 +32,7 @@ def versleutel(zin, plaatsen):
     return nieuwezin
 
 def omkeren(zin):
-    omgekeerd_woord = ''
-    for letter in zin:
-        omgekeerd_woord = letter + omgekeerd_woord
-    return omgekeerd_woord
+    return zin[::-1]
 
 zin = str(input("""Welke zin wilt u encrypteren? """))
 nummer = int(input('Geef geheime versleuteling:'))

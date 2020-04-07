@@ -10,11 +10,15 @@ for i in range(hoeveel):
         allebasen += base + ' '
         aantal += 1
 
-if len(allebasen) <= 3:
-    mes = 'De DNA-keting bevat 1 soort base: ' + allebasen
-else:
-    versch_b = len(allebasen) - aantal
-    mes = 'De DNA-keting bevat ' + str(versch_b) + ' verschillende soorten basen: ' + allebasen
-
+mv = aantal > 1
+mes = 'De DNA-keting bevat ' + str(aantal) + ' verschillende' * mv \
+      + ' soort' + 'en' * mv + ' base' +'n' * mv + ': ' +  allebasen
 #uitvoer
 print(mes)
+
+
+
+# if aantal == 1:
+#     mes = 'De DNA-keting bevat 1 soort base: ' + allebasen
+# else:
+#     mes = 'De DNA-keting bevat ' + str(aantal) + ' verschillende soorten basen: ' + allebasen

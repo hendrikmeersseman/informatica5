@@ -8,4 +8,4 @@ def palindroom(woord):
     return i == (len(woord) // 2)
 
 
-print(palindroom('ab' + (100000000 * 'a')))
+print(palindroom('lepel'))
